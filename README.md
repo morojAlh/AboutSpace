@@ -67,23 +67,23 @@ Files Structure:
 "About Space" is a web application targeted those people that interested in Space, it collects movies, apps and news(soon) in one place.
 
 - Home Page
-<img width="350" alt="screen shot 2018-12-20 at 9 35 19 am" src="https://user-images.githubusercontent.com/37349702/50268175-d5050100-043a-11e9-85f6-cbea2609d860.png">
+<img width="400" alt="screen shot 2018-12-20 at 9 35 19 am" src="https://user-images.githubusercontent.com/37349702/50268175-d5050100-043a-11e9-85f6-cbea2609d860.png">
 
 
 - Movies Page (index.html)
-<img width="350" alt="screen shot 2018-12-20 at 9 34 04 am" src="https://user-images.githubusercontent.com/37349702/50268476-07632e00-043c-11e9-9986-7f559af7b099.png">
+<img width="400" alt="screen shot 2018-12-20 at 9 34 04 am" src="https://user-images.githubusercontent.com/37349702/50268476-07632e00-043c-11e9-9986-7f559af7b099.png">
 
 - Apps Page (index.html)
-<img width="350" alt="screen shot 2018-12-20 at 9 34 17 am" src="https://user-images.githubusercontent.com/37349702/50268622-86f0fd00-043c-11e9-9d71-951285d7313c.png">
+<img width="400" alt="screen shot 2018-12-20 at 9 34 17 am" src="https://user-images.githubusercontent.com/37349702/50268622-86f0fd00-043c-11e9-9d71-951285d7313c.png">
 
 - Signup Page
-<img width="350" alt="screen shot 2018-12-20 at 9 34 27 am" src="https://user-images.githubusercontent.com/37349702/50268658-aa1bac80-043c-11e9-97ad-fc2d1a2a70d1.png">
+<img width="400" alt="screen shot 2018-12-20 at 9 34 27 am" src="https://user-images.githubusercontent.com/37349702/50268658-aa1bac80-043c-11e9-97ad-fc2d1a2a70d1.png">
 
 - Signin Page
-<img width="350" alt="screen shot 2018-12-20 at 9 34 39 am" src="https://user-images.githubusercontent.com/37349702/50268691-c7e91180-043c-11e9-8356-019f5a5cd3b5.png">
+<img width="400" alt="screen shot 2018-12-20 at 9 34 39 am" src="https://user-images.githubusercontent.com/37349702/50268691-c7e91180-043c-11e9-8356-019f5a5cd3b5.png">
 
 - Proile Page
-<img width="350" alt="screen shot 2018-12-20 at 9 35 42 am" src="https://user-images.githubusercontent.com/37349702/50268721-dd5e3b80-043c-11e9-854a-936072038573.png">
+<img width="400" alt="screen shot 2018-12-20 at 9 35 42 am" src="https://user-images.githubusercontent.com/37349702/50268721-dd5e3b80-043c-11e9-854a-936072038573.png">
 
 You can view the web from [Here](https://morojalh.github.io/AboutSpace/).
 
