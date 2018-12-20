@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Thasadith" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='/static/styles/styles.css'>
+    <title>Document</title>
+</head>
+<body>
+        <div class="row">
+                <div class="col-sm nav">
+                        <a href="/movies">All Movies</a>
+                </div>
+                <div class="col-sm nav">
+                        <a href="/apps">All Apps</a>
+                </div>
+                <div class="col-sm nav">
+                                <a href="/news">All News</a>
+                        </div>
+                {{#user}}
+                <div class="col-sm nav">
+                    <a href="/profile">profile</a>
+                </div>
+                {{/user}}
+
+                {{^user}}
+                <div class="col-sm nav">
+                        <a href="/signup">signup</a>
+                </div>
+                <div class="col-sm nav">
+                        <a href="/signin">signin</a>
+                </div>
+                {{/user}}
+            
+        </div>  
+        <div class="container">
+<a href="/"><h1 class="namePage">ABOUT SPACE</h1></a>
+
+<div class="col styleCard">
+        <div class="card">
+            <img class="card-img-top" src="{{movie.poster_img}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">
+                   {{movie.name}}
+              </h5>
+              <p class="card-text">{{movie.description}}</p>
+              Rate: <p class="card-text">{{movie.rate}}</p>
+              Years: <p class="card-text">{{movie.years}}</p>
+              Main Cast:<p class="card-text">{{movie.main_cast}}</p>
+             <a href="{{movie.imdb_url}}"><img src="https://vignette.wikia.nocookie.net/fox-thegifted/images/5/55/Imdb.png/revision/latest?cb=20180505194801" height="50px"></a>
+             
+             <a href="{{movie.trailer}}"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-512.png" height="50px"></a>
+              <!-- <a href="/movies/{{id}}" class="btn btn-primary">Open</a> -->
+            </div>
+            {{#user}}
+            {{#isFavorite}}
+            <form action="/movies/{{movie.id}}/register?_method=DELETE" method="POST">
+                <button type="submit"><img src="https://image.flaticon.com/icons/svg/616/616490.svg" height="50px"></button>
+            </form>
+          {{/isFavorite}}
+          {{^isFavorite}}
+          <form action="/movies/{{movie.id}}/register" method="POST">
+            <button type="submit"><img src="https://image.flaticon.com/icons/svg/616/616822.svg" height="50px"></button>
+            </form>
+          {{/isFavorite}}
+          {{/user}}
+    </div>
+    </div>
+
+    <!-- <h1>name {{movie.name}}</h1>
+    <p>{{movie.description}}</p>
+    <img src={{movie.poster_img}} alt=""> -->
+  </div>
+</body>
+</html>

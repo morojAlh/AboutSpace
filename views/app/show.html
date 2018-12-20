@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Thasadith" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel='stylesheet' type='text/css' href='/static/styles/styles.css'>
+    <title>Document</title>
+</head>
+<body>
+               
+                        <!-- <nav class="site-header sticky-top py-1">
+                  <div class="container d-flex flex-column flex-md-row justify-content-between">
+                    <a class="py-2" href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+                    </a>
+                    <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
+                    <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
+                    <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
+                    <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
+                    <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
+                    <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>
+                    <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
+                  </div>
+                    </nav> -->
+                            <div class="row">
+                                    <div class="col-sm nav">
+                                            <a href="/movies">All Movies</a>
+                                    </div>
+                                    <div class="col-sm nav">
+                                            <a href="/apps">All Apps</a>
+                                    </div>
+                                    <div class="col-sm nav">
+                                                <a href="/news">All News</a>
+                                        </div>
+                                    {{#user}}
+                                    <div class="col-sm nav">
+                                        <a href="/profile">profile</a>
+                                    </div>
+                                    {{/user}}
+            
+                                    {{^user}}
+                                    <div class="col-sm nav">
+                                            <a href="/signup">signup</a>
+                                    </div>
+                                    <div class="col-sm nav">
+                                            <a href="/signin">signin</a>
+                                    </div>
+                                    {{/user}}
+                                
+                            </div>  
+                            <div class="container">
+                <a href="/"><h1 class="namePage">ABOUT SPACE</h1></a>
+
+
+                <div class="col styleCard">
+                        <div class="card">
+                            <div class="card-body">
+                              <h2 class="card-title">
+                                   {{app.name}}
+                              </h2>
+                              <p class="card-text">{{app.description}}</p>
+                              Rate: <p class="card-text">{{app.rate}}</p>
+                              Languages: <p class="card-text">{{app.languages}}</p>
+                             <a href="{{app.app_url}}"><img src="https://image.flaticon.com/icons/svg/831/831276.svg" height="50px"></a>
+                            </div>
+                            {{#user}}
+                            {{#isFavorite}}
+                            <form action="/apps/{{app.id}}/register?_method=DELETE" method="POST">
+                                <button type="submit"><img src="https://image.flaticon.com/icons/svg/616/616490.svg" height="50px"></button>
+                            </form>
+                          {{/isFavorite}}
+                          {{^isFavorite}}
+                          <form action="/apps/{{app.id}}/register" method="POST">
+                            <button type="submit"><img src="https://image.flaticon.com/icons/svg/616/616822.svg" height="50px"></button>
+                            </form>
+                          {{/isFavorite}}
+                          {{/user}}
+                    </div>
+                    </div>
+
+    <!-- <h1>{{app.name}}</h1>
+    <p>{{app.description}}</p>
+    <a href={{app.app_url}}>App Store</a>
+    {{#user}}
+    {{#isFavorite}}
+    <form action="/apps/{{app.id}}/register?_method=DELETE" method="POST">
+        <button type="submit">Delete from favorite</button>
+    </form>
+  {{/isFavorite}}
+  {{^isFavorite}}
+  <form action="/apps/{{app.id}}/register" method="POST">
+    <button type="submit">Add to favorite</button>
+    </form>
+  {{/isFavorite}}
+  {{/user}} -->
+  </div>
+</body>
+</html>

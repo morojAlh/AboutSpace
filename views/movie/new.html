@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Thasadith" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel='stylesheet' type='text/css' href='/static/styles/styles.css'>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="row">
+                <div class="col-sm nav">
+                        <a href="/movies">All Movies</a>
+                </div>
+                <div class="col-sm nav">
+                        <a href="/apps">All Apps</a>
+                </div>
+                <div class="col-sm nav">
+                        <a href="/news">All News</a>
+                </div>
+                {{#user}}
+                <div class="col-sm nav">
+                    <a href="/profile">profile</a>
+                </div>
+                {{/user}}
+
+                {{^user}}
+                <div class="col-sm nav">
+                        <a href="/signup">signup</a>
+                </div>
+                <div class="col-sm nav">
+                        <a href="/signin">signin</a>
+                </div>
+                {{/user}}
+            
+        </div>  
+        <div class="container">
+        <a href="/"><h1 class="namePage">ABOUT SPACE</h1></a>
+
+        <form action="/movies" method="POST">
+            <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="name" name="name">
+                    </div>
+                    <div class="form-group">
+                      <label for="description">description</label>
+                      <input type="text" class="form-control" id="description" placeholder="description" name="description">
+                    </div>
+                    <div class="form-group">
+                            <label for="rate">rate</label>
+                            <input type="number" class="form-control" id="rate" placeholder="rate" name="rate">
+                    </div>
+                    <div class="form-group">
+                        <label for="years">Yers</label>
+                        <input type="number" class="form-control" id="years" placeholder="years" name="years">
+                    </div>
+                    <div class="form-group">
+                        <label for="main_cast">Main cast</label>
+                        <input type="text" class="form-control" id="main_cast" placeholder="main_cast" name="main_cast">
+                    </div>
+                    <div class="form-group">
+                            <label for="imdb_url">Imdb url</label>
+                            <input type="text" class="form-control" id="imdb_url" placeholder="imdb_url" name="imdb_url">
+                    </div>
+                    <div class="form-group">
+                            <label for="trailer">trailer</label>
+                            <input type="trailer" class="form-control" id="trailer" placeholder="trailer" name="trailer">
+                    </div>
+                    <div class="form-group">
+                            <label for="poster_img">Poster img url</label>
+                            <input type="text" class="form-control" id="poster_img" placeholder="poster_img" name="poster_img">
+                    </div>
+                    <!-- <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div> -->
+                    <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+
+
+        <!-- <form action="/movies" method="POST"> -->
+            <!-- <label for="name">
+                name: <input type="text" name="name" id="name">
+            </label> -->
+            <!-- <label for="description">
+                description: <input type="text" name="description" id="description">
+            </label> -->
+            <!-- <label for="rate">
+                rate: <input type="number" name="rate" id="rate">
+            </label> -->
+            <!-- <label for="years">
+                    years: <input type="number" name="years" id="years">
+            </label> -->
+            <!-- <label for="main_cast">
+                main_cast: <input type="text" name="main_cast" id="main_cast">
+            </label> -->
+            <!-- <label for="imdb_url">
+                imdb_url: <input type="text" name="imdb_url" id="imdb_url">
+            </label>
+            <label for="trailer">
+                trailer: <input type="text" name="trailer" id="trailer">
+            </label>
+            <label for="poster_img">
+                poster_img: <input type="text" name="poster_img" id="poster_img">
+            </label>
+            <button type="submit">Add</button>
+        </form> -->
+        </div>
+</body>
+</html>
