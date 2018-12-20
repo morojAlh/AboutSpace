@@ -42,23 +42,23 @@ Files Structure:
 │   ├── dbconfig.js
 │   └── db.sql
 └── views
-    ├── index.html # Styles for your app. Feel free to customize this as you desire.
-    ├── app # Helpful images for your app. Use at your discretion.
+    ├── index.html
+    ├── app
     │   ├── index.html
     │   ├── new.html
     │   └── show.html
-    ├── movie # Helpful images for your app. Use at your discretion.
+    ├── movie
     │   ├── index.html
     │   ├── new.html
     │   └── show.html
-    ├── news # Helpful images for your app. Use at your discretion.
+    ├── news
     │   └── index.html
-    ├── profile # Helpful images for your app. Use at your discretion.
+    ├── profile
     │   ├── index.html
     │   └── show.html
-    ├── sginup # Helpful images for your app. Use at your discretion.
+    ├── sginup
     │   └── index.html
-    └── signin # Helpful images for your app. Use at your discretion.
+    └── signin
         └── index.html
 ```
 
