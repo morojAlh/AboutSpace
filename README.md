@@ -13,7 +13,6 @@
 ## Instructions
 
 About Space is my second project in WDI with GA, It's about how develop the client and server side.
-In the project I create two HTML pages `index.html` it's the landeing page and `game.html`, also one file for styling `style.css` and one file for javascript `main.js`.
 
 Files Structure:
 ```bash
