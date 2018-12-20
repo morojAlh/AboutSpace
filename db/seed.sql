@@ -1,6 +1,3 @@
-DROP DATABASE IF EXISTS about_space_db;
-CREATE DATABASE about_space_db;
-
 \c about_space_db 
 
 CREATE TABLE users(
@@ -10,8 +7,6 @@ CREATE TABLE users(
   password VARCHAR not null,
   type VARCHAR
 );
-
--- INSERT INTO users(name,email,password) VALUES('Moroj', 'moroj.alh@gmail.com','123456');
 
 CREATE TABLE apps(
   id serial PRIMARY KEY,
